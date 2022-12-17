@@ -1,0 +1,11 @@
+<p>proudct-item works!</p>
+<div>
+    <a routerLink="/proudect-details/{{product.id}}">
+        <img src="{{product.image}}" alt="">
+      
+    </a>
+    <h4>{{product.name}}</h4>
+    <p>{{product.price}}</p>
+    <button class="btn btn-primary" (click)="addToCart()">Add to cart</button>
+
+</div>

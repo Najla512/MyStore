@@ -1,0 +1,7 @@
+<form #form="ngForm" (ngSubmit)="onSubmit(users)">
+    <p>Currently signing in as: {{ firstname+'-'+lastname }}</p>
+    <input type="text" name="firstname" required minlength="2" appForbiddenName="firstname" [(ngModel)]="firstname">
+    <input type="text" name="lastname" required minlength="2" appForbiddenName="lastname" [(ngModel)]="lastname">
+    <input type="password" name="password" required minlength="1" [(ngModel)]="password">
+    <button type="submit" [disabled]="form.invalid">Sign in</button>
+  </form>
